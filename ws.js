@@ -32,7 +32,7 @@ server.get('/', (request, response)=>{
         //currentYear: new Date().getFullYear()
     });
  });
-server.get('/user', (request, response)=>{
+/*server.get('/user', (request, response)=>{
     response.send ({
         user: 'Omry',
         age: 53,
@@ -50,10 +50,16 @@ server.get('/bad', (request, response)=>{
     response.send({
         errorMessage: 'Somthing went wrong! don\'t come back!'
     })
-});
+});*/
 server.get('/about', (request, response)=>{
     response.render('about.hbs', {
         title: 'About page',
+        //date: new Date().getFullYear()
+    });
+});
+server.get('/project', (request, response)=>{
+    response.render('project.hbs', {
+        title: 'Portfolio page',
         //date: new Date().getFullYear()
     });
 });
