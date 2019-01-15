@@ -1,5 +1,5 @@
 const express = require('express');
-
+const port = process.env.Port || 3000
 let server = express();
 const hbs = require('hbs');
 let maint = false;
@@ -57,7 +57,7 @@ server.get('/about', (request, response)=>{
         //date: new Date().getFullYear()
     });
 });
-server.listen(3000, ()=>{
+server.listen(port, ()=>{
     //Initialize if you need
-    console.log ('server is running on port 3000');
+    console.log (`server is running on port ${port}`);
 });
